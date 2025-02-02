@@ -1,0 +1,44 @@
+.order-tracking-page {
+  padding: 20px;
+}
+
+.loading {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-details {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+}
+
+.order-details h2 {
+  margin: 0;
+  color: #333;
+}
+
+.order-details p {
+  margin: 5px 0;
+}
+
+.test-button {
+  background-color: #4CAF50; /* Cor de fundo verde */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Centralizar texto */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-block; /* Para o botão se comportar como um bloco */
+  margin: 10px 0; /* Margem */
+  cursor: pointer; /* Cursor em forma de mão */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+.test-button:hover {
+  background-color: #45a049; /* Muda a cor de fundo ao passar o mouse */
+}
