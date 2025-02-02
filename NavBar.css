@@ -1,0 +1,113 @@
+/* src/styles/Navbar.css */
+.navbar {
+  background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+  padding: 10px 20px; /* Aumenta o espaçamento interno lateral */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa e difusa */
+  position: sticky; /* Fixa a navbar no topo ao rolar */
+  top: 0; /* Mantém a navbar no topo */
+  z-index: 1000; /* Garante que a navbar esteja acima de outros elementos */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.navbar:hover {
+  background-color: rgb(85, 9, 9); /* Muda a cor de fundo ao passar o mouse */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+}
+
+.navbar-list {
+  list-style-type: none; /* Remove marcadores da lista */
+  display: flex; /* Exibe os itens em linha */
+  justify-content: space-between; /* Espaça os itens uniformemente */
+  align-items: center; /* Alinha verticalmente */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove preenchimento */
+}
+
+.navbar-list li {
+  margin: 0 15px; /* Aumenta o espaçamento entre os itens da lista */
+  position: relative; /* Para posicionar pseudo-elementos */
+}
+
+.navbar-list a {
+  color: white; /* Cor do texto branco */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Texto em negrito */
+  padding: 10px 15px; /* Aumenta o padding para maior área clicável */
+  border-radius: 5px; /* Arredonda as bordas */
+  transition: color 0.3s, background-color 0.3s, transform 0.2s; /* Transição suave na cor e fundo */
+}
+
+.navbar-list a:hover {
+  color: #ff0000; /* Muda a cor do texto ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.1); /* Adiciona um fundo leve ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento no tamanho do link ao passar o mouse */
+}
+
+/* Efeito de sublinhado */
+.navbar-list a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Ajusta a posição do sublinhado */
+  width: 0;
+  height: 2px;
+  background: #a10e0e; /* Cor do sublinhado */
+  transition: width 0.3s, left 0.3s; /* Transição suave */
+}
+
+.navbar-list a:hover::after {
+  width: 100%; /* Expande o sublinhado ao passar o mouse */
+  left: 0; /* Alinha o sublinhado à esquerda */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px; /* Ajusta o padding em telas menores */
+  }
+
+  .navbar-list {
+    flex-direction: column; /* Exibe os itens em coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .navbar-list li {
+    margin: 5px 0; /* Espaçamento vertical entre os itens */
+  }
+}
+
+/* Estilo para um botão de hambúrguer (opcional) */
+.hamburger {
+  display: none; /* Esconde o botão por padrão */
+  flex-direction: column; /* Empilha os três traços do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.hamburger div {
+  width: 25px; /* Largura dos traços do botão */
+  height: 3px; /* Altura dos traços do botão */
+  background-color: white; /* Cor dos traços */
+  margin: 4px 0; /* Espaçamento entre os traços */
+}
+
+/* Estilo do botão de hambúrguer em telas menores */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Mostra o botão em telas menores */
+  }
+
+  .navbar-list {
+    display: none; /* Esconde a lista em telas menores */
+  }
+
+  .navbar-list.show {
+    display: flex; /* Mostra a lista quando ativa */
+    flex-direction: column; /* Alinha a lista verticalmente */
+    width: 100%; /* Ocupa toda a largura */
+    position: absolute; /* Posiciona a lista sobre a navbar */
+    background-color: red; /* Cor de fundo vermelha */
+    top: 60px; /* Abaixo da navbar */
+    left: 0; /* Alinha à esquerda */
+    z-index: 999; /* Acima da navbar */
+  }
+}
