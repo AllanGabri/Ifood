@@ -1,0 +1,27 @@
+/* src/styles/StarRating.css */
+.star-rating {
+  display: flex;
+}
+
+.star {
+  font-size: 24px; /* Tamanho das estrelas */
+  color: lightgray; /* Cor das estrelas vazias */
+}
+
+.star.filled {
+  color: gold; /* Cor das estrelas preenchidas */
+}
+
+.star.half-filled {
+  color: gold; /* Cor da parte preenchida */
+  position: relative;
+}
+
+.star.half-filled::before {
+  content: '★'; /* Estrela cheia */
+  position: absolute;
+  left: 0;
+  width: 50%; /* Preenche metade da estrela */
+  overflow: hidden; /* Esconde a parte não preenchida */
+  color: gold; /* Cor da parte preenchida */
+}
