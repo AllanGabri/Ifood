@@ -1,0 +1,54 @@
+/* styles.css */
+
+/* Estilos gerais para a página */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte básica */
+    background-color: #2b0303; /* Fundo claro */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo do container do mapa */
+  .map-container {
+    margin: 50px auto; /* Espaçamento em torno do mapa */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta quaisquer bordas de conteúdo que se estendam para fora */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  }
+  
+  /* Título do mapa */
+  .map-title {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #333; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+  }
+  
+  /* Estilos dos marcadores (se personalizado) */
+  .custom-marker {
+    background-color: #007bff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 50%; /* Forma arredondada */
+    padding: 5px; /* Espaço interno */
+    width: 30px; /* Largura */
+    height: 30px; /* Altura */
+    display: flex; /* Alinhamento flexível */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+  }
+  
+  /* Botão de ação (ex: "Ver Direções") */
+  .button {
+    background-color: #28a745; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+  }
+  
+  .button:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+  }
+  
