@@ -1,0 +1,85 @@
+/* src/styles/Favorites.css */
+
+.favorites-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f7f8fc;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.favorite-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorite-list-item {
+    margin: 12px 0;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.favorite-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f0f4ff;
+}
+
+.favorite-link {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.favorite-link:hover {
+    color: #125b99;
+    text-decoration: underline;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .favorites-container {
+        padding: 20px;
+    }
+    
+    .favorite-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .favorite-link {
+        font-size: 1.1rem;
+    }
+}
+
